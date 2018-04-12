@@ -32,6 +32,9 @@ export default Texta.extend({
   replaceFunction: function(value){
     return '$1\${' + value + '} ';
   }
+  templateFunction: function(value){
+    return value;
+  }
 ,
   didInsertElement: function() {
     this.editor = new Textarea(this.get('element'));
@@ -45,6 +48,9 @@ export default Texta.extend({
     },
     replace: function (value) {
       return self.get('replaceFunction')(value);
+    },
+    template: function(value) {
+      return self.get('templateFunction')(value);
     }
   }]);
   },
