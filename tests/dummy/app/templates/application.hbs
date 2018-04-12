@@ -1,3 +1,9 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">Welcome to Textcomplete for ember</h2>
 
 {{outlet}}
+{{text-complete value=test data=data}}
+{{text-complete  search=(action "search")}}
+{{#text-complete  search=(action "search")}}
+Test
+{{/text-complete}}
+{{test}}
